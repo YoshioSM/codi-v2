@@ -1,0 +1,35 @@
+.animate-on-scroll {
+    opacity: 0;
+    transition: opacity 1.5s ease, transform 1.5s ease;
+    transform: translateY(50px);
+}
+.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.typing-animation {
+    display: inline-block;
+    overflow: hidden;          /* Oculta las letras que aún no han aparecido */
+    white-space: nowrap;       /* Evita que las letras se muevan a la siguiente línea */
+    animation: typing 1.5s steps(4) 1s forwards; /* Ajusta el tiempo de la animación */
+    border-right: 2px solid white; /* Cursor */
+    animation: typing 2s steps(4) 1s forwards, blink-cursor 0.5s step-end infinite;
+}
+
+/* Animación de escritura */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 4.5ch; /* Espacio para las letras "CODI" */
+    }
+}
+
+/* Animación del cursor parpadeante */
+@keyframes blink-cursor {
+    50% {
+        border-color: transparent;
+    }
+}

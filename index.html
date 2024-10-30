@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/@google/model-viewer@v1.10.1/dist/model-viewer.min.js"></script>
+    <link rel="stylesheet" href="input\styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body class="bg-black">
+
+    <!-- navbar -->
+   <!-- Navbar mejorado -->
+<div class="bg-gray-950 h-16 flex items-center justify-between px-10">
+    <!-- Logo y Nombre -->
+    <div class="flex items-center space-x-3">
+        <img src="IMG/its.png" alt="Logo GEITS" class="h-10 w-auto animate-pulse">
+        <p class="text-white text-xl font-semibold">GEITS</p>
+    </div>
+    
+</div>
+
+
+    <!-- content -->
+    <model-viewer class="w-full h-96" src="Models/codi v2.glb" alt="Un modelo 3D" auto-rotate camera-controls></model-viewer>
+
+    <div class="animate-on-scroll text-center px-4 sm:px-8 lg:px-16">
+        <h1 class="mt-6 text-white text-3xl md:text-4xl lg:text-5xl text-center animate-on-scroll">
+            Nuestra mascota: <span class="typing-animation">CODI</span>
+        </h1>
+        <p class="m-4 text-white animate-on-scroll text-base md:text-lg lg:text-xl">
+            ¡Conoce a la mascota de nuestro grupo estudiantil, la cual representa a nosotros los programadores!
+        </p>
+        
+        <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6 animate-on-scroll">
+            <img class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg border-4 border-solid border-inherit shadow-lg rounded-lg mx-auto" src="IMG/GEITS 1.png" alt="">
+            <img class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg border-4 border-solid border-inherit shadow-lg rounded-lg mx-auto" src="IMG/GEITS 2.png" alt="">
+        </div>
+    
+        <h1 class="mt-24 text-white text-3xl md:text-4xl lg:text-5xl text-center animate-on-scroll">
+            Somos lo que hacemos
+        </h1>
+        <p class="m-4 text-white text-center animate-on-scroll text-base md:text-lg lg:text-xl">
+            "Somos una comunidad estudiantil en la Facultad de Ingeniería Mecánica y Eléctrica, creada para apoyar el aprendizaje entre alumnos. Nuestras actividades van más allá de la programación: buscamos introducir a las personas al mundo de la tecnología, participamos en hackatones, y organizamos diversas actividades para fomentar el crecimiento y la colaboración."
+        </p>
+    
+        <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6 animate-on-scroll">
+            <img class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg border-4 border-solid border-inherit shadow-lg rounded-lg mx-auto" src="IMG/GEITS 3.png" alt="">
+            <img class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg border-4 border-solid border-inherit shadow-lg rounded-lg mx-auto" src="IMG/GEITS 4.png" alt="">
+        </div>
+    
+        <div class="mt-16 text-center text-white">
+            <h2 class="text-xl md:text-2xl">Visita nuestras redes sociales!</h2>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="https://www.facebook.com/groups/925467094495422?locale=es_LA" class="hover:opacity-75 transition">
+                    <img src="IMG/face.png" alt="Facebook" class="h-8 w-8 sm:h-10 sm:w-10">
+                </a>
+                <a href="https://www.instagram.com/ge_its_fime/?hl=es" class="hover:opacity-75 transition">
+                    <img src="IMG/insta.png" alt="Instagram" class="h-8 w-8 sm:h-10 sm:w-10">
+                </a>
+                <a href="https://discord.gg/WnrNVwpr" class="hover:opacity-75 transition">
+                    <img src="IMG/its.png" alt="Discord" class="h-8 w-8 sm:h-10 sm:w-10">
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    
+
+<!-- Footer con enlace a GitHub -->
+<footer class="bg-gray-900 text-white text-center py-4 mt-8">
+    <p>Elaborado por YoshioSM<a href="https://github.com/YoshioSM" class="text-blue-500 hover:underline" target="_blank">
+        <i class="fab fa-github text-2xl"></i> GitHub</a>
+    </p>
+</footer>
+</div>
+
+
+    
+<!-- script animate on scroll -->
+    <script>
+                const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+        function handleScroll() {
+            animatedElements.forEach(element => {
+                const rect = element.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    element.classList.add('in-view');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', handleScroll);
+        document.addEventListener('DOMContentLoaded', handleScroll);
+        
+    </script>
+</body>
+</html>
